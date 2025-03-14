@@ -74,4 +74,3 @@ async def chat(request: ChatRequest):
         return {"response": generated_text}
     except ValueError:
         raise HTTPException(status_code=500, detail="Error: Could not parse the response!")
-
