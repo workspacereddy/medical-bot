@@ -48,7 +48,7 @@ async def chat(request: ChatRequest):
     prompt = f"Act as a {role}. {input_text}"
 
     # Hugging Face API URL for the model
-    url = "https://api-inference.huggingface.co/models/perplexity-ai/r1-1776"
+    url = "https://api-inference.huggingface.co/models/Qwen/QwQ-32B"
     
     # Hugging Face API key (replace with your actual key)
     headers = {
