@@ -48,7 +48,7 @@ async def chat(request: ChatRequest):
     prompt = f"Act as a {role}. {input_text}"
 
     # Hugging Face API URL for the model
-    url = "https://api-inference.huggingface.co/models/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF"
+    url = "https://api-inference.huggingface.co/models/microsoft/Phi-4-mini-instruct"
     
     # Hugging Face API key (replace with your actual key)
     headers = {
