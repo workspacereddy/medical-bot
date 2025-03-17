@@ -48,7 +48,7 @@ async def chat(request: ChatRequest):
     prompt = input_text
 
     # Hugging Face API URL for the model
-    url = "https://api-inference.huggingface.co/models/deepseek-ai/DeepSeek-V3"
+    url = "https://api-inference.huggingface.co/models/microsoft/phi-4"
     
     # Hugging Face API key (replace with your actual key)
     headers = {
