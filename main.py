@@ -20,21 +20,21 @@ class ChatRequest(BaseModel):
     input_text: str
 
 # Function to infer the role based on keywords in the input text
-def infer_role(text: str):
-    # Define basic keywords for detecting roles
-    health_keywords = ["feel", "sick", "ill", "pain", "headache", "fever", "cough", "nausea"]
-    advice_keywords = ["what", "how", "should", "do", "help", "advice", "recommend"]
+# def infer_role(text: str):
+#     # Define basic keywords for detecting roles
+#     health_keywords = ["feel", "sick", "ill", "pain", "headache", "fever", "cough", "nausea"]
+#     advice_keywords = ["what", "how", "should", "do", "help", "advice", "recommend"]
     
-    # Check if the input contains health-related keywords
-    if any(keyword in text.lower() for keyword in health_keywords):
-        return "doctor"
+#     # Check if the input contains health-related keywords
+#     if any(keyword in text.lower() for keyword in health_keywords):
+#         return "doctor"
     
-    # Check if the input contains advice-related keywords
-    elif any(keyword in text.lower() for keyword in advice_keywords):
-        return "advisor"
+#     # Check if the input contains advice-related keywords
+#     elif any(keyword in text.lower() for keyword in advice_keywords):
+#         return "advisor"
     
-    # Default to "advisor" if no clear role is identified
-    return "advisor"
+#     # Default to "advisor" if no clear role is identified
+#     return "advisor"
 
 # Define an endpoint for the chat API
 @app.post("/api/chat")
@@ -42,13 +42,13 @@ async def chat(request: ChatRequest):
     input_text = request.input_text
     
     # Infer the role based on the input text
-    role = infer_role(input_text)
+    # role = infer_role(input_text)
     
     # Construct the prompt for Hugging Face API
-    prompt = f"Act as a {role}. {input_text}"
+    prompt = f"{input_text}"
 
     # Hugging Face API URL for the model
-    url = "https://api-inference.huggingface.co/models/openai-community/gpt2"
+    url = "https://api-inference.huggingface.co/models/Qwen/QwQ-32B"
     
     # Hugging Face API key (replace with your actual key)
     headers = {
