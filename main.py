@@ -52,7 +52,7 @@ async def chat(request: ChatRequest):
     
     # Hugging Face API key (replace with your actual key)
     headers = {
-        "Authorization": "Bearer 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"
+        "Authorization": "Bearer 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"
     }
 
     # Send the request to Hugging Face's API
