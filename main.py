@@ -48,7 +48,7 @@ async def chat(request: ChatRequest):
     prompt = f"Act as a {role}. {input_text}"
 
     # Hugging Face API URL for the model
-    url = "https://api-inference.huggingface.co/models/deepseek-ai/DeepSeek-R1"
+    url = "https://api-inference.huggingface.co/models/google/flan-t5-large"
     
     # Hugging Face API key (replace with your actual key)
     headers = {
